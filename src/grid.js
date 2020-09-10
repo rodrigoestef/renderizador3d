@@ -24,6 +24,7 @@ export default class Grid {
         this.c2d = canvas.getContext('2d')
         document.querySelector('body').appendChild(canvas)
         this.sun = new Circle(10,20,100,10,'#ff0')
+        this.house = new Circle(0,0,95,10,'#00f')
         this.earth = new Circle(0,-10000,0,9999,'#0f0')
         
     }
@@ -50,6 +51,7 @@ export default class Grid {
     rePaint(){
         this.clearGrid()
         this.sun.paint(this.c2d)
+        this.house.paint(this.c2d)
         this.earth.paint(this.c2d)
     }
 

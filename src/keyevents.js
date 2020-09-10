@@ -34,17 +34,21 @@ export default class KeyEvents{
 
 
     static KeyA(){
-        Grid.Ox -= 0.1 
+        Grid.Ox -= 0.1* Math.cos(Grid.Theta)
+        Grid.Oz -= 0.1* Math.sin(Grid.Theta)
     }
 
     static KeyD(){
-        Grid.Ox += 0.1 
+        Grid.Ox += 0.1* Math.cos(Grid.Theta)
+        Grid.Oz += 0.1* Math.sin(Grid.Theta)
     }
 
     static KeyW(){
-        Grid.Oz += 0.1 
+        Grid.Ox += 0.1* ( - Math.sin(Grid.Theta))
+        Grid.Oz += 0.1* Math.cos(Grid.Theta)
     }
     static KeyS(){
-        Grid.Oz -= 0.1 
+        Grid.Ox -= 0.1* ( - Math.sin(Grid.Theta))
+        Grid.Oz -= 0.1* Math.cos(Grid.Theta)
     }
 }
